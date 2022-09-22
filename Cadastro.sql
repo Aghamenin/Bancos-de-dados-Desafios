@@ -21,6 +21,7 @@ create table pessoa(
 
 create table favorite_food(
 	id smallint unsigned auto_increment,
+    nome varchar(30),
     food varchar(30),
     constraint pk_pessoa primary key(id, food),
     constraint fk_food foreign key(id)
@@ -30,4 +31,7 @@ create table favorite_food(
     drop table favorite_food;
     select * from favorite_food;
     
-    insert into favorite_food values(default, 'Big Mac');
+    insert into favorite_food values(default,'José', 'Big Mac'),
+									(default, 'Maria','Temaki'),
+                                    (default,'João', 'Hamburguer');
+                                     
